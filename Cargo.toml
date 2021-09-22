@@ -1,0 +1,24 @@
+[package]
+name = "serde_kdl"
+version = "0.1.0"
+authors = ["Oleksii Filonenko <brightone@protonmail.com>"]
+edition = "2018"
+description = "Serde support for KDL document language"
+readme = "README.md"
+repository = "https://github.com/Br1ght0ne/serde_kdl"
+license = "MIT OR Apache-2.0"
+keywords = ["serialization", "serde", "kdl", "dsl"]
+categories = ["encoding"]
+
+[dependencies]
+kdl = "3.0"
+serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+serde_json = "1.0"
+serde_test = "1.0"
+
+[features]
+default = ["std"]
+std = ["serde/std"]
+alloc = ["serde/alloc"]
